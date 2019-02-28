@@ -193,8 +193,9 @@ for i in range(NUM_TRAIN):
         print('step {:d}, error {:.2f}'.format(i, mae))
 
 # •Û‘¶
-cwd = os.getcwd()  # only for windows
-saver.save(sess, cwd+"\\model.ckpt")
+cwd = os.getcwd()
+#saver.save(sess, cwd+"\\model.ckpt")  ## for windows?
+saver.save(sess, cwd+"/model.ckpt")  ## for linux?
 
 
 
