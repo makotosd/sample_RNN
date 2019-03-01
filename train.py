@@ -194,10 +194,8 @@ for i in range(NUM_TRAIN):
 
 # •Û‘¶
 cwd = os.getcwd()
-#saver.save(sess, cwd+"\\model.ckpt")  ## for windows?
-saver.save(sess, cwd+"/model.ckpt")  ## for linux?
-
-
-
-
+if os.name == 'nt':  # for windows
+    saver.save(sess, cwd+"\\model.ckpt")  ## for windows?
+else:
+    saver.save(sess, cwd+"/model.ckpt")  ## for linux?
 
